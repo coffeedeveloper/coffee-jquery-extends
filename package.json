@@ -1,14 +1,14 @@
 {
-  "name": "jquery-extends",
-  "version": "0.1.0",
+  "name": "coffee-jquery-extends",
+  "version": "1.0.0",
   "description": "jquery extend plguin",
-  "main": "lib/main.js",
+  "main": "jquery.extnds.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coffeedeveloper/jquery.extend.js.git"
+    "url": "git+https://github.com/coffeedeveloper/coffee-jquery-extends.git"
   },
   "keywords": [
     "jquery",
@@ -18,7 +18,12 @@
   "author": "CoffeeDeveloper",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coffeedeveloper/jquery.extend.js/issues"
+    "url": "https://github.com/coffeedeveloper/coffee-jquery-extends/issues"
   },
-  "homepage": "https://github.com/coffeedeveloper/jquery.extend.js#readme"
+  "homepage": "https://github.com/coffeedeveloper/coffee-jquery-extends#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2"
+  }
 }
