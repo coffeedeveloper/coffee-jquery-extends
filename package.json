@@ -1,8 +1,8 @@
 {
   "name": "coffee-jquery-extends",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jquery extend plguin",
-  "main": "jquery.extnds.js",
+  "main": "jquery.extends.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
