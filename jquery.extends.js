@@ -9,24 +9,27 @@
 }(function($) {
 
   $.fn.binds = function(obj) {
-    for (var event in obj) {
-      if (typeof obj[event] === 'object') {
-        for (var select in obj[event]) {
-          if (select === 'self') {
-            $(this).on(event, obj[event][select]);
-          } else {
-            $(this).on(event, select, obj[event][select]);
+    return this.each(function() {
+      for (var event in obj) {
+        if (typeof obj[event] === 'object') {
+          for (var select in obj[event]) {
+            if (select === 'self') {
+              $(this).on(event, obj[event][select]);
+            } else {
+              $(this).on(event, select, obj[event][select]);
+            }
           }
+        } else {
+          $(this).on(event, obj[event]);
         }
-      } else {
-        $(this).on(event, obj[event]);
       }
-    }
+    });
   };
 
   $.fn.serializeObject = function() {
     var obj = {};
     var arr = this.serializeArray();
+
     $.each(arr, function() {
       var name = this.name,
           value = this.value || '';
@@ -44,4 +47,12 @@
     return obj;
   };
 
+  $.fn.hasAttr = function(attr) {
+    var dom = $(this)[0];
+    if ('hasAttribute' in dom) {
+      return dom.hasAttribute[attr];
+    } else {
+      return dom.getAttribute(attr) != null;
+    }
+  };
 }));
